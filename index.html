@@ -17,11 +17,13 @@
       background-color: #f4f4f4;
       color: #333;
     }
+
     .header-container {
       max-width: 1000px;
       margin: 20px auto;
       padding: 0 15px;
     }
+
     header {
       background-color: #003366;
       color: white;
@@ -30,45 +32,103 @@
       border-radius: 8px;
       position: relative;
     }
+
     header nav {
       margin-top: 15px;
     }
+
     header nav a {
       color: #ffffff;
       margin: 0 10px;
       text-decoration: none;
       font-size: 16px;
     }
+
     header nav a:hover {
       color: #ffcc00;
     }
+
     header nav i {
       margin-right: 5px;
     }
+
+    .main-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+      flex-wrap: wrap;
+    }
+
+    .left-panel {
+      flex: 2;
+      min-width: 300px;
+      margin: 20px;
+    }
+
+    .right-panel {
+      flex: 1;
+      min-width: 280px;
+      margin: 20px;
+    }
+
     section {
       padding: 20px;
-      margin: 20px auto;
+      margin-bottom: 20px;
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      max-width: 960px;
     }
+
     ul {
       list-style-type: disc;
       padding-left: 20px;
     }
+
     a {
       color: #003366;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
+    .skills-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-box li {
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    .skills-box li i {
+      color: #003366;
+      margin-right: 10px;
+      width: 20px;
+      text-align: center;
+    }
+
     footer {
       text-align: center;
       padding: 10px;
       background-color: #ddd;
       margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+      }
+
+      .left-panel, .right-panel {
+        margin: 10px auto;
+        width: 90%;
+      }
     }
   </style>
 </head>
@@ -91,63 +151,71 @@
     </header>
   </div>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Results-driven Technical Writer with 5 years of experience, including 3 years in technical documentation and 2 years in software development. Adept at simplifying complex technical concepts for diverse audiences and enhancing user experience through well-structured manuals, online help systems, and release notes.</p>
-    <p>Skilled in collaborating with cross-functional teams to drive process improvements and documentation efficiency. Strong background in project management methodologies and technical writing tools.</p>
-  </section>
+  <div class="main-content">
+    <!-- LEFT SIDE CONTENT -->
+    <div class="left-panel">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>Results-driven Technical Writer with 5 years of experience, including 3 years in technical documentation and 2 years in software development. Adept at simplifying complex technical concepts for diverse audiences and enhancing user experience through well-structured manuals, online help systems, and release notes.</p>
+        <p>Skilled in collaborating with cross-functional teams to drive process improvements and documentation efficiency. Strong background in project management methodologies and technical writing tools.</p>
+      </section>
 
-  <section id="experience">
-    <h2>Work Experience</h2>
+      <section id="experience">
+        <h2>Work Experience</h2>
 
-    <h3>Technical Writer – Thinkpalm Technologies Pvt Ltd, Kerala, India<br><small>March 2021 – November 2023</small></h3>
-    <ul>
-      <li>Authored user manuals, online help content, and release notes aligned with agile development updates.</li>
-      <li>Led migration of 500+ documentation pages, improving accuracy and reducing support inquiries.</li>
-      <li>Mentored junior writers and standardized documentation templates across the team.</li>
-    </ul>
-    <p><strong>Clients worked with:</strong> <a href="https://zeronorth.com/" target="_blank">Alphaori / ZERONORTH</a></p>
+        <h3>Technical Writer – Thinkpalm Technologies Pvt Ltd, Kerala, India<br><small>March 2021 – November 2023</small></h3>
+        <ul>
+          <li>Authored user manuals, online help content, and release notes aligned with agile development updates.</li>
+          <li>Led migration of 500+ documentation pages, improving accuracy and reducing support inquiries.</li>
+          <li>Mentored junior writers and standardized documentation templates across the team.</li>
+        </ul>
+        <p><strong>Clients worked with:</strong> <a href="https://zeronorth.com/" target="_blank">Alphaori / ZERONORTH</a></p>
 
-    <h3>Software Developer – Indocosmo Systems Pvt Ltd, Kerala, India<br><small>September 2019 – February 2021</small></h3>
-    <ul>
-      <li>Led a machine learning project for ProField using Python, improving client decision-making by 25%.</li>
-      <li>Developed TypeScript and ThreeJS solutions for architectural simulation tools for Marietta.</li>
-      <li>Managed full-stack development tasks using Java, HTML, and SQL.</li>
-    </ul>
-    <p><strong>Clients worked with:</strong> 
-      <a href="https://www.profield.jp/" target="_blank">ProField</a>, 
-      <a href="https://www.marietta.co.jp/" target="_blank">Marietta</a>
-    </p>
-  </section>
+        <h3>Software Developer – Indocosmo Systems Pvt Ltd, Kerala, India<br><small>September 2019 – February 2021</small></h3>
+        <ul>
+          <li>Led a machine learning project for ProField using Python, improving client decision-making by 25%.</li>
+          <li>Developed TypeScript and ThreeJS solutions for architectural simulation tools for Marietta.</li>
+          <li>Managed full-stack development tasks using Java, HTML, and SQL.</li>
+        </ul>
+        <p><strong>Clients worked with:</strong> 
+          <a href="https://www.profield.jp/" target="_blank">ProField</a>, 
+          <a href="https://www.marietta.co.jp/" target="_blank">Marietta</a>
+        </p>
+      </section>
 
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Documentation Tools:</strong> Adobe RoboHelp, MadCap Flare, MS Word, Snagit Editor</li>
-      <li><strong>Project Management & Collaboration:</strong> JIRA, GitHub, Tortoise Git, MS Project</li>
-      <li><strong>Technical Proficiency:</strong> Java, C Programming, HTML, CSS</li>
-      <li><strong>Data Analysis & Reporting:</strong> Power BI, MS Excel (Advanced)</li>
-      <li><strong>Content Development:</strong> Release Notes, User Guides, Product Demos, API Documentation</li>
-      <li><strong>Testing & QA:</strong> UAT, Requirement Gathering, Agile Methodology</li>
-    </ul>
-  </section>
+      <section id="samples">
+        <h2>Writing Samples</h2>
+        <ul>
+          <li><a href="Samples/Sample Configuration Guide.pdf" target="_blank">Configuration Guide – Sample</a></li>
+          <li><a href="Samples/Sample Document.pdf" target="_blank">Document – Sample</a></li>
+          <li><a href="Samples/Sample User Guide.pdf" target="_blank">User Guide - Sample</a></li>
+        </ul>
+        <p><em>*Please click any one of the sample writings to download and view the file.</em></p>
+      </section>
 
-  <section id="samples">
-    <h2>Writing Samples</h2>
-    <ul>
-      <li><a href="Samples/Sample Configuration Guide.pdf" target="_blank">Configuration Guide – Sample</a></li>
-      <li><a href="Samples/Sample Document.pdf" target="_blank">Document – Sample</a></li>
-      <li><a href="Samples/Sample User Guide.pdf" target="_blank">User Guide - Sample</a></li>
-    </ul>
-    <p><em>*Please click any one of the sample writings to download and view the file.</em></p>
-  </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: blessymolsebastian@gmail.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/blessymol-sebastian" target="_blank">linkedin.com/in/blessymol-sebastian</a></p>
+        <p>GitHub: <a href="https://github.com/Blessy-Sebastian" target="_blank">github.com/Blessy-Sebastian</a></p>
+      </section>
+    </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: blessymolsebastian@gmail.com.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/blessymol-sebastian" target="_blank">linkedin.com/in/blessymol-sebastian</a></p>
-    <p>GitHub: <a href="https://github.com/Blessy-Sebastian" target="_blank">github.com/Blessy-Sebastian</a></p>
-  </section>
+    <!-- RIGHT SIDE SKILLS PANEL -->
+    <div class="right-panel">
+      <section class="skills-box">
+        <h2><i class="fas fa-tools"></i> Technical Skills</h2>
+        <ul>
+          <li><i class="fas fa-file-word"></i> Adobe RoboHelp, MadCap Flare, MS Word, Snagit Editor</li>
+          <li><i class="fas fa-project-diagram"></i> JIRA, GitHub, Tortoise Git, MS Project</li>
+          <li><i class="fas fa-code"></i> Java, C Programming, HTML, CSS</li>
+          <li><i class="fas fa-chart-bar"></i> Power BI, MS Excel (Advanced)</li>
+          <li><i class="fas fa-pen-fancy"></i> Release Notes, User Guides, API Documentation</li>
+          <li><i class="fas fa-vials"></i> UAT, Agile, Requirement Gathering</li>
+        </ul>
+      </section>
+    </div>
+  </div>
 
   <footer>
     &copy; 2025 Blessymol Sebastian. All Rights Reserved.
